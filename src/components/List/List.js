@@ -43,7 +43,7 @@ export default class List extends Component {
                     <ListItem
                         filtredContacts={filtredContacts}
                         changeCheckbox={this.changeCheckbox}
-                        checboxForEdit={edit}
+                        statusCheckbox={edit}
                         deleteContact={deleteContact}
                     />
                 </ul>

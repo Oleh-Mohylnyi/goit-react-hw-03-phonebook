@@ -33,9 +33,7 @@ class App extends Component {
     this.setState({ filter: e.target.value })
   }
 
-  // regNumber = /+?/d{1,4}?[-./s]?/(?/d{1,3}?/)?[-./s]?/d{1,4}[-./s]?/d{1,4}[-./s]?/d{1,9}
-
-  onSubmit = (name, number) => {
+ onSubmit = (name, number) => {
     
     const regNumber = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/
     const regName = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/
@@ -68,6 +66,7 @@ class App extends Component {
     }
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
+      filter: ''
     }));
   };
 
